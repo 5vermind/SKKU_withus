@@ -49,6 +49,7 @@ public class AppRestController {
 		String pw = request.getParameter("pw");
 		return userService.IogIn(id, pw);
 	}
+
 	@RequestMapping("/signup")
 	public String signUp(HttpServletRequest request){
 		String id = request.getParameter("id");
@@ -69,15 +70,14 @@ public class AppRestController {
 	    String id = request.getParameter("id");
 	    String  pw = request.getParameter("pw");
 	    String del = request.getParameter("request");
-	    if (!id.equals("null") && del.equals("null")){
+	    if (!id.equals(null) && del.equals(null)){
 	        return userService.IogIn(id, pw);
         }
-        else if (!del.equals("null")){
+        else if (!del.equals(null)){
             return userService.cancelId(id, pw);
         }
         else {
 	        return "0";
         }
     }
-    @RequestMapping
 }
