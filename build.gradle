@@ -57,7 +57,8 @@ dependencies {
     compile("commons-dbcp:commons-dbcp:1.4")
     compile("mysql:mysql-connector-java:5.0.8")
     compile "org.springframework:spring-context-support"
-    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+   // providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+    compile "org.springframework.boot:spring-boot-starter-tomcat"
     compile "com.sun.mail:javax.mail"
     compile ("org.springframework.boot:spring-boot-starter-mail")
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '1.4.3.RELEASE'
